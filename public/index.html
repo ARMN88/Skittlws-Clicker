@@ -1,0 +1,202 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create your own Skittlws company and take over!">
+    <meta name="author" content="Naful Waffle the Fulaful">
+    <title>Skittlws Clicker</title>
+  <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  <img src="./images/settings.png"  id="info-icon">
+  <section id="info-section" class="close">
+  <table>
+    <tr>
+      <th colspan="3">LEADERBOARD</th>
+    </tr>
+    <tr>
+      <th>Place</th>
+      <th>Name</th>
+      <th>Score</th>
+    </tr>
+  </table>
+  </section>
+  <section id="loading-section">
+    <h1>Loading...</h1>
+  </section>
+  <section id="cookie-section">
+    <div class="counters">
+      <h2 id="cookie-counter">0 Skittlws</h2>
+      <p id="rate-counter">0 Skittlw/second</p>
+    </div>
+    <img src="./images/skittlws.png" alt="Skittlws" id="main-cookie"/>
+    <p id="main-text">Your Journey Begins...</p>
+  </section>
+  <section id="level-section">
+    <h1>Levels</h1>
+    <div class="level" id="lcursor" style="background:lightgreen;">
+      <img class="nop" src="./images/cursor.png"/>
+      <img class="nop" src="./images/cursor.png"/>
+      <img class="nop" src="./images/cursor.png"/>
+      <img class="nop" src="./images/cursor.png"/>
+      <img class="nop" src="./images/cursor.png"/>
+      <img class="nop" src="./images/cursor.png"/>
+      <img class="nop" src="./images/cursor.png"/>
+  </div>
+    <div class="level hidden" id="lkidnapper" style="background:seashell;">
+      <img src="./images/kidnapper.png" class="nop">
+      <img src="./images/kidnapper.png" class="nop">
+      <img src="./images/kidnapper.png" class="nop">
+      <img src="./images/kidnapper.png" class="nop">
+      <img src="./images/kidnapper.png" class="nop">
+      <img src="./images/kidnapper.png" class="nop">
+      <img src="./images/kidnapper.png" class="nop">
+    </div>
+    <div class="level hidden" id="lfarm" style="background:saddlebrown;">
+      <img src="./images/plant.png" class="nop">
+      <img src="./images/plant.png" class="nop">
+      <img src="./images/plant.png" class="nop">
+      <img src="./images/plant.png" class="nop">
+      <img src="./images/plant.png" class="nop">
+      <img src="./images/plant.png" class="nop">
+      <img src="./images/plant.png" class="nop">
+    </div>
+    <div class="level hidden" id="lfactory" style="background:grey;">
+      <img src="./images/factory.png" class="nop">
+      <img src="./images/factory.png" class="nop">
+      <img src="./images/factory.png" class="nop">
+      <img src="./images/factory.png" class="nop">
+      <img src="./images/factory.png" class="nop">
+      <img src="./images/factory.png" class="nop">
+      <img src="./images/factory.png" class="nop">
+    </div>
+    <div class="level hidden" id="lmasjid" style="background:skyblue;">
+      <img src="./images/mosque.png" class="nop">
+      <img src="./images/mosque.png" class="nop">
+      <img src="./images/mosque.png" class="nop">
+      <img src="./images/mosque.png" class="nop">
+      <img src="./images/mosque.png" class="nop">
+      <img src="./images/mosque.png" class="nop">
+      <img src="./images/mosque.png" class="nop">
+    </div>
+    <div class="level hidden" id="lsihrunMubeen" style="background:#C71585;">
+      <img src="./images/mubeen.png" class="nop">
+      <img src="./images/mubeen.png" class="nop">
+      <img src="./images/mubeen.png" class="nop">
+      <img src="./images/mubeen.png" class="nop">
+      <img src="./images/mubeen.png" class="nop">
+      <img src="./images/mubeen.png" class="nop">
+      <img src="./images/mubeen.png" class="nop">
+    </div>
+    <div class="level hidden" id="lmuftiQitta" style="background:midnightblue;">
+      <img src="./images/qitta.png" class="nop">
+      <img src="./images/qitta.png" class="nop">
+      <img src="./images/qitta.png" class="nop">
+      <img src="./images/qitta.png" class="nop">
+      <img src="./images/qitta.png" class="nop">
+      <img src="./images/qitta.png" class="nop">
+      <img src="./images/qitta.png" class="nop">
+    </div>
+    <div class="level hidden" id="lnafulTheWaffle" style="background:royalblue;">
+      <img src="./images/waffle.png" class="nop">
+      <img src="./images/waffle.png" class="nop">
+      <img src="./images/waffle.png" class="nop">
+      <img src="./images/waffle.png" class="nop">
+      <img src="./images/waffle.png" class="nop">
+      <img src="./images/waffle.png" class="nop">
+      <img src="./images/waffle.png" class="nop">
+    </div>
+  </section>
+  <section id="buy-section">
+    <h1>Upgrades</h1>
+    <div class="hidden upgrade" title="A cursor to click for you." id="cursor">
+      <img src="./images/cursor.png" alt="logo" id="cursor">
+      <div id="cursor">
+        <h3 class="name" id="cursor">Cursor</h3>
+        <p class="price" id="cursor">100 Skittlws</p>
+      </div>
+      <h2 id="cursor">0</h2>
+    </div>
+    <div class="hidden upgrade" title="Hire Workers to kidnap others and collect ransom." id="kidnapper">
+      <img src="./images/kidnapper.png" alt="logo" id="kidnapper">
+      <div id="kidnapper">
+        <h3 class="name" id="kidnapper">Kidnapper</h3>
+        <p class="price" id="kidnapper">500 Skittlws</p>
+      </div>
+      <h2 id="kidnapper">0</h2>
+    </div>
+    <div style="display: auto" class="hidden upgrade" title="Grow Skittlws using a farm." id="farm">
+      <img src="./images/plant.png" alt="logo" id="farm">
+      <div id="farm">
+        <h3 class="name" id="farm">Farm</h3>
+        <p class="price" id="farm">2,000 Skittlws</p>
+      </div>
+      <h2 id="farm">0</h2>
+    </div>
+    <div style="display: auto" class="hidden upgrade" title="Use a factory to manufacture Skittlws." id="factory">
+      <img src="./images/factory.png" alt="logo" id="factory">
+      <div id="factory">
+        <h3 class="name" id="factory">Factory</h3>
+        <p class="price" id="factory">10,000 Skittlws</p>
+      </div>
+      <h2 id="factory">0</h2>
+    </div>
+    <div class="hidden upgrade" title="Use a masjid to make more profit." id="masjid">
+      <img src="./images/mosque.png" alt="logo" id="masjid">
+      <div id="masjid">
+        <h3 class="name" id="masjid">Masjid</h3>
+        <p class="price" id="masjid">100,000 Skittlws</p>
+      </div>
+      <h2 id="masjid">0</h2>
+    </div>
+    <div class="hidden upgrade" title="Summon Skittlws from scary magic." id="sihrunMubeen">
+      <img src="./images/mubeen.png" alt="logo" id="sihrunMubeen">
+      <div id="sihrunMubeen">
+        <h3 class="name" id="sihrunMubeen">Sihrun Mubeen</h3>
+        <p class="price" id="sihrunMubeen">1,000,000 Skittlws</p>
+      </div>
+      <h2 id="sihrunMubeen">0</h2>
+    </div>
+    <div class="hidden upgrade" title="Use the power of Mufti Qitta to make it rain Skittlws." id="muftiQitta">
+      <img src="./images/qitta.png" alt="logo" id="muftiQitta">
+      <div id="muftiQitta">
+        <h3 class="name" id="muftiQitta">Mufti Qitta</h3>
+        <p class="price" id="muftiQitta">10,000,000 Skittlws</p>
+      </div>
+      <h2 id="muftiQitta">0</h2>
+    </div>
+    <div class="hidden upgrade" id="nafulTheWaffle">
+      <img src="./images/waffle.png" alt="logo" id="nafulTheWaffle">
+      <div id="nafulTheWaffle">
+        <h3 class="name" id="nafulTheWaffle">Naful The Waffle</h3>
+        <p class="price" id="nafulTheWaffle">100,000,000 Skittlws</p>
+      </div>
+      <h2 id="nafulTheWaffle">0</h2>
+    </div>
+  <div class="upgrade" title="???" id="hidd" style="filter: grayscale(100%);">
+      <img src="./images/mystery.png" alt="???">
+      <div id="mystery">
+        <h3 class="name" id="mystery">???</h3>
+        <p class="price" id="mystery">??? Skittlws</p>
+      </div>
+    </div>
+  </section>
+  <section id="chat-section">
+    <div id="messages">
+      <p>User: Message</p>
+    </div>
+    <div id="input">
+      <input/>
+      <button>Enter</button>
+    </div>
+  </section>
+  <img src="./images/bateekh.png" id="bateekh" class="popup">
+  <img src="./images/golden.png" id="golden" class="popup">
+  <img src="./images/ultimate.png" id="ultimate" class="popup">
+  <img src="./images/skittlws.png" id="particle">
+  </body>
+  <script src="https://cdn.socket.io/4.4.0/socket.io.min.js" integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/eruda/2.4.1/eruda.min.js"></script>
+  <script src="script.js"></script>
+  </html>

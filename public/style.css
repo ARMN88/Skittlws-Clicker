@@ -1,0 +1,310 @@
+body {
+  background: rgb(24, 24, 24);
+  color: rgb(231, 231, 231);
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  image-rendering: pixelated;
+  display: flex;
+  align-items: stretch;
+  font-family: "monospace";
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+section {
+  flex: 1;
+  border: 1px white solid;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+/* ***************** LOADING SCREEN ***************** */
+#loading-section {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  background: rgba(24, 24, 24, 1);
+  cursor: wait;
+  transition: all 2s;
+  color: #ff4c4c;
+  font-size: 7vh;
+  z-index: 1000000;
+}
+/* ***************** COOKIE SECTION ***************** */
+#cookie-section {
+  display: flex;
+  flex-direction: column;
+}
+
+#cookie-section h2 {
+  text-align: center;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 5%, rgba(255,255,255,0.4) 15%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 85%, rgba(255,255,255,0) 95%);
+  margin-bottom: 0;
+  font-size: 4vh;
+  margin-top: 15%;
+}
+
+#cookie-section #rate-counter {
+  text-align: center;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 5%, rgba(255,255,255,0.4) 15%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 85%, rgba(255,255,255,0) 95%);
+  margin: 0;
+  font-size: 3vh;
+}
+
+#main-cookie {
+  margin: auto;
+  width: 50%;
+  object-fit: contain;
+  transition: all 100ms;
+}
+
+#cookie-section #main-text {
+  width: 95%;
+  margin: 0 0 5vh 0;
+  text-align: center;
+  background: linear-gradient(90deg, rgba(0,0,0,0) 1%, rgba(0,0,0,0.7) 15%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.7) 85%, rgba(0,0,0,0) 99%);  
+  color: rgb(231, 231, 231);
+  font-size: 3vh;
+  padding: 10px 0;
+}
+
+#particle {
+  position: fixed;
+  top: 110vh;
+  width: 2%;
+  transition: all 2s linear;
+}
+/* ***************** LEVEL SECTION ***************** */
+#level-section {
+  flex: 2;
+  overflow-y: scroll;
+  background: inherit;
+}
+
+#level-section h1 {
+  text-align: center;
+  margin: 0;
+  background: cadetblue;
+  font-size: 6vh;
+  padding: 5px 0;
+  border: 1px white solid;
+  box-sizing: border-box;
+}
+
+#level-section .level {
+  height: 25vh;
+  border: 1px solid rgb(231, 231, 231);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+}
+
+.level img {
+  height: 50%;
+  animation-name: activated;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes activated {
+  0% {
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ****************** BUY SECTION ****************** */
+#buy-section {
+  overflow-y: scroll;
+}
+
+#buy-section h1 {
+  text-align: center;
+  margin: 0;
+  background: purple;
+  font-size: 6vh;
+  padding: 5px 0;
+  border: 1px white solid;
+  box-sizing: border-box;
+}
+
+#buy-section .boosters {
+  height: 12vh;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+}
+
+.booster {
+  height: 90%;
+  border: 1px solid white;
+  margin: 0 0.5vh;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#buy-section .upgrade {
+  height: 12.5vh;
+  border: 1px solid rgb(231, 231, 231);
+  box-sizing: border-box;
+  display: flex;
+  background: darkolivegreen;
+  color: #fff;
+  cursor: pointer;
+}
+
+#buy-section .upgrade img {
+  height: 80%;
+  margin: auto 5px;
+}
+
+#buy-section .upgrade div {
+  flex: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 6%;
+}
+
+#buy-section .upgrade div h3 {
+  margin: 0;
+  font-size: 3vh;
+  margin-bottom: 2%; 
+}
+
+#buy-section .upgrade div p {
+  margin: 0;
+  font-size: 2vh;
+}
+
+#buy-section .upgrade h2 {
+  margin: auto 5px;
+  font-size: 6vh;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.nop {
+  opacity: 0;
+}
+/* ****************** Info Section ****************** */
+#info-section {
+  background: rgba(24, 24, 24);
+  z-index: 100;
+  transition: all 1s;
+  overflow: scroll;
+  border: 2px solid #D4D496;
+}
+
+#info-icon {
+  position: fixed;
+  left: 2vh;
+  top: 2vh;
+  background: rgb(231, 231, 231);
+  width: 6vh;
+  border-radius: 10%;
+  z-index: 1000;
+  overflow: auto;
+}
+
+.open {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 90vh;
+}
+
+.close {
+  position: fixed;
+  top: 2vh;
+  left: 2vh;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+table, th, td {
+  font-size: 5vh;
+  border: 1px solid #D4D496;
+  color: #D4D496;
+  border-collapse: collapse;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  word-break: break-all;
+}
+
+td:nth-child(3) {
+  text-align: right;
+  word-break: keep-all;
+}
+
+th {
+  background: darkcyan;
+}
+
+/* ******************** CHAT SECTION ******************** */
+#chat-section {
+  position: fixed;
+  border: none;
+  background: rgba(24, 24, 24, 0.6);
+  height: min(10vh, 10vw);
+  width: min(50vh, 50vw);
+  left: min(60vh, 60vw);
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+#chat-section #messages {
+  flex: 2;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  word-break: break-all;
+}
+
+#chat-section #input {
+  display: flex;
+}
+
+#input input {
+  flex: 3;
+}
+
+#input button {
+  flex: 1;
+}
+
+#messages p {
+  overflow: hidden;
+}
+
+.popup {
+  position: fixed;
+  height: 30vh;
+  z-index: 999;
+  left: 1000vh;
+}
